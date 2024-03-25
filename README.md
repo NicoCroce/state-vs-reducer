@@ -4,17 +4,20 @@
 
 Es necesario entender que para escalar y mantener el proyecto, es importante mantener responsabilidades aisladas.
 
-**UI**: Es responsable del renderizado y la lógica relacionada a la experiencia de usuario.
+**UI**: Es responsable del renderizado y la lógica relacionada con la experiencia de usuario.
 
 **Hook** : Es responsable de mantener la lógica de estados más complejos, de filtrar, de comunicar con estados globales, retornar a la interfaz la expresión más simple del código, para su reutilización en el componente que sea requerido.
 
-**Context**: En esta capa se encuentra el etado y las acciones que modifican dicho estado.
+**Context**: En esta capa se encuentra el estado y las acciones que modifican dicho estado.
 
-> Es importante mantener las responsabilidades aisladas porque nos permite modificar la forma de utilizar los estados independientemente de la la UI. Es decir que las modificaciones solo deberán hacerse sobre la capa del Store (Context, Redux, Zustand, etc) y los hooks intermediarios entre la UI y el Store. La Interfaz no debería ser alterada, ya que la experiencia de usuario es la misma.
+> Es importante mantener las responsabilidades aisladas porque nos permite modificar la forma de utilizar los estados independientemente de la UI. Es decir que las modificaciones solo deberán hacerse sobre la capa del Store (Context, Redux, Zustand, etc) y los hooks intermediarios entre la UI y el Store. La Interfaz no debería ser alterada, ya que la experiencia de usuario es la misma.
+
+![image](https://github.com/NicoCroce/state-vs-reducer/assets/6332275/bd052a98-a2b7-4868-abf6-d0e7ae66cb7e)
+
 
 ## State vs useReducer
 
-En este ejemplo se utiliza `Context` como estado global y dos alternavtivas.
+En este ejemplo se utiliza `Context` como estado global y dos alternativas.
 
 Tanto `useState` como `useReducer` son hooks de estado en React, pero tienen diferencias significativas en cómo manejan y actualizan el estado en tus componentes.
 
@@ -74,12 +77,14 @@ Existen dos opciones.
 
 2. Crear un hook por pantalla, obteniendo los datos necesarios de `store`.
 
-En ambas opciones nos encontramos con que la lógica de `useContext` se encuentra dentro del Hook. Esto simplifica la leginilidad de la UI.
+En ambas opciones nos encontramos con que la lógica de `useContext` se encuentra dentro del Hook. Esto simplifica la legibilidad de la UI.
 
-// IMAGEN
+![image](https://github.com/NicoCroce/state-vs-reducer/assets/6332275/76baf64c-ad88-44b2-a16e-5fd3319b6e1c)
+
 
 ## Comunicación entre capas
 
 En este caso se muestra cómo cada interfaz obtiene lo que necesita de cada Hook.
 
-// IMAGEN
+![image](https://github.com/NicoCroce/state-vs-reducer/assets/6332275/c0826107-b5a5-4f9f-ad6f-1d7d97bd06d3)
+
