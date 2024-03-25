@@ -1,0 +1,46 @@
+main {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 24px;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  section {
+    > div {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: flex-start;
+      pre {
+        width: 100%;
+        padding: 8px;
+        background: white;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.card-container {
+  max-width: 400px;
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 3px;
+  padding: 16px 24px;
+  background-color: white;
+  h3 {
+    font-size: 18px;
+    color: rgb(49, 49, 49);
+    margin: 0;
+  }
+  > div {
+    display: flex;
+    gap: 8px;
+  }
+  input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 2px 8px;
+  }
+}

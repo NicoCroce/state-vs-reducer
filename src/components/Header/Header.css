@@ -1,0 +1,10 @@
+.header-container {
+  padding: 16px;
+  background: white;
+  box-shadow: 1px 1px 10px black;
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+}
